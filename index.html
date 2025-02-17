@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="banner">
+      <div class="overlay">
+        <nav>
+          <div class="logo">
+            <img src="logo.png" alt="" />
+            <h1>Porsche</h1>
+          </div>
+          <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <ul id="nav-menu">
+            <li>Home</li>
+            <a href="#cars"><li>Cars</li></a>
+            <a href="#about"><li>About Us</li></a>
+            <a href="#contact"><li>Contact Us</li></a>
+          </ul>
+        </nav>
+        <div class="porsche">
+          <h1>
+            <span>P</span>
+            <span>o</span>
+            <span>r</span>
+            <span>s</span>
+            <span>c</span>
+            <span>h</span>
+            <span>e</span>
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <section id="cars">
+      <div class="cars">
+        <h1>Cars</h1>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <img src="car1.jpg" alt="Car 1" />
+          <div class="card-info">
+            <h2>Porsche 911</h2>
+            <p>Horsepower: 450 HP</p>
+            <p>Top Speed: 190 mph</p>
+            <p>0-60 mph: 3.5s</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="car2.jpg" alt="Car 2" />
+          <div class="card-info">
+            <h2>Porsche Cayenne</h2>
+            <p>Horsepower: 340 HP</p>
+            <p>Top Speed: 150 mph</p>
+            <p>0-60 mph: 5.2s</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="car3.jpg" alt="Car 3" />
+          <div class="card-info">
+            <h2>Porsche Taycan</h2>
+            <p>Horsepower: 402 HP</p>
+            <p>Top Speed: 143 mph</p>
+            <p>0-60 mph: 4.6s</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about">
+        <h1>About Us</h1>
+      </div>
+      <div class="about-container">
+        <div class="left-content">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Exercitationem natus animi autem commodi voluptatibus minus debitis
+            cupiditate fuga reiciendis, sunt ipsa odit nisi dolores omnis libero
+            porro adipisci quasi dignissimos aut nam placeat deserunt ex. Autem
+            laudantium harum adipisci officiis nobis quae inventore reiciendis,
+            vero, odit pariatur at sequi qui consectetur blanditiis tempora
+            voluptas libero eos, quasi saepe! In, sed esse! Placeat ea
+            consequatur dolore praesentium magnam! Odio, labore repellat?
+          </p>
+        </div>
+        <div class="right-img">
+          <img src="car2.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <h1>Contact Us</h1>
+      </div>
+      <div class="contact-container">
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" name="name" required />
+            <label for="name">Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" required />
+            <label for="email">Email</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="message">Message</label>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <script>
+      function toggleMenu() {
+        const navMenu = document.getElementById("nav-menu");
+        navMenu.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

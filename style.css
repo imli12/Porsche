@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* banner section */
+
+#banner {
+  width: 100%;
+  height: 100vh;
+  background-image: url("car3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.623);
+  color: white;
+}
+
+nav {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  width: 70px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  cursor: pointer;
+}
+
+nav ul li {
+  padding: 0 20px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.porsche {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.porsche h1 {
+  font-size: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.porsche h1 span {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: appear 0.5s forwards;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.porsche h1 span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.porsche h1 span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.porsche h1 span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.porsche h1 span:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.porsche h1 span:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.porsche h1 span:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.porsche h1 span:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+nav ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+nav ul li:hover {
+  color: #ffcc00;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+@media screen and (max-width: 900px) {
+  .porsche h1 {
+    font-size: 6rem;
+  }
+  .hamburger {
+    display: flex;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    text-align: center;
+  }
+  nav ul.active {
+    display: flex;
+  }
+  nav ul li {
+    padding: 15px 0;
+  }
+  nav .logo img {
+    width: 50px;
+  }
+  .logo h1 {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .porsche h1 {
+    font-size: 4rem;
+  }
+}
+
+/* cars section */
+#cars {
+  width: 100%;
+  height: auto;
+  padding: 40px 0;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.cars {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cars h1 {
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+.card-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  background-color: #2d2d2d;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px;
+  color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.card-info p {
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+@media screen and (max-width: 920px) {
+  .card-container {
+    flex-wrap: wrap;
+  }
+  .card {
+    margin: 10px 0;
+  }
+}
+
+/* about section */
+#about {
+  width: 100%;
+  height: 100vh;
+  padding: 40px 0;
+}
+.about {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about h1 {
+  font-size: 3rem;
+}
+
+.about-container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.about-container .right-img img {
+  width: 400px;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-container .right-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.left-content p {
+  width: 500px;
+  text-align: justify;
+}
+
+@media screen and (max-width: 920px) {
+  .about-container {
+    flex-wrap: wrap-reverse;
+  }
+  .left-content p {
+    font-size: 0.9rem;
+  }
+  .about-container .right-img img {
+    width: 200px;
+  }
+  .left-content p {
+    width: auto;
+  }
+}
+
+/* contact section */
+/* contact section */
+#contact {
+  width: 100%;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.contact h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #2d2d2d;
+  border: 2px solid #444;
+  border-radius: 5px;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ffcc00;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #888;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: 0;
+  left: 10px;
+  font-size: 0.8rem;
+  color: #ffcc00;
+  background-color: #1a1a1a;
+  padding: 0 5px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ffcc00;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e6b800;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .contact h1 {
+    font-size: 2rem;
+  }
+
+  .contact-container {
+    padding: 10px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
+  }
+
+  .contact-form button {
+    font-size: 0.9rem;
+  }
+}
